@@ -1,0 +1,17 @@
+// @include border-radius;
+@mixin border-radius {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+// @include link-colors(blue, red, green);
+@mixin link-colors($normal:$base-color, $hover:$base-color, $visited:$base-color) {
+    color: $normal;
+    &:hover {
+        color: $hover;
+    }
+    &:visited {
+        color: $visited;
+    }
+}

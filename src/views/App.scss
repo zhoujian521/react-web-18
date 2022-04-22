@@ -1,3 +1,4 @@
+@import '../style/mixin.scss';
 .App {
     text-align: center;
     .App-header {
@@ -32,4 +33,9 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+.link-colors {
+    @include link-colors(blue, red, green);
+    @extend .App-logo;
 }
