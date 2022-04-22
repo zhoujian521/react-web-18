@@ -22,7 +22,6 @@ function ReactStart(props: ReactStartProps): JSX.Element {
 				<a className="link" href={href} target="_blank" rel="noopener noreferrer">
 					Learn React
 				</a>
-				<span className={classNames('link-colors', 'link-colors-2')}>Learn React</span>
 			</header>
 		</div>
 	);

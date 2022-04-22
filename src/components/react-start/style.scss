@@ -3,7 +3,7 @@
     text-align: center;
     .header {
         background-color: #282c34;
-        min-height: 100vh;
+        // min-height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -11,7 +11,7 @@
         font-size: calc(10px + 2vmin);
         color: white;
         .react-logo {
-            height: 40vmin;
+            height: 100px;
             pointer-events: none;
         }
         .link {

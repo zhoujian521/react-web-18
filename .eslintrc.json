@@ -28,7 +28,7 @@
 		"eqeqeq": 2, //必须使用全等
 		"key-spacing": [2, { "beforeColon": false, "afterColon": true }], // 对象字面量中冒号后跟空格
 		"use-isnan": 2, //禁止比较时使用NaN，只能用isNaN()
-		"react-hooks/rules-of-hooks": "off",
-		"react-hooks/exhaustive-deps": "off"
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn"
 	}
 }
