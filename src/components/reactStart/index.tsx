@@ -1,13 +1,31 @@
 import React from 'react';
 import classNames from 'classnames';
 
-interface IImageProps {
-	message?: string;
-	className?: string;
+import logo from '../../../src/assets/images/logo.svg';
+
+import './style.scss';
+
+export interface ReactStartProps {
+	href?: string;
 }
 
-function Image({ message = '您没有收到任何消息', className }: IImageProps) {
-	return <div>111</div>;
+function ReactStart(props: ReactStartProps): JSX.Element {
+	const { href = '' } = props;
+
+	return (
+		<div className="start-container">
+			<header className="header">
+				<img src={logo} className="react-logo" alt="logo" />
+				<p>
+					Edit <code>src/App.tsx</code> and save to reload.
+				</p>
+				<a className="link" href={href} target="_blank" rel="noopener noreferrer">
+					Learn React
+				</a>
+				<span className={classNames('link-colors', 'link-colors-2')}>Learn React</span>
+			</header>
+		</div>
+	);
 }
 
-export default Image;
+export default ReactStart;
