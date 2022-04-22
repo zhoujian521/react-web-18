@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../src/assets/images/logo.svg';
-import  './App.scss';
+import  './style.scss';
+import classNames from 'classnames';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         >
           Learn React
         </a>
-        <a className="link-colors"  href="https://reactjs.org">https://reactjs.org</a>
+        <a className={classNames('link-colors', 'link-colors-2')}  href="https://reactjs.org">https://reactjs.org</a>
       </header>
     </div>
   );

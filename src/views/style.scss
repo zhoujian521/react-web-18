@@ -39,3 +39,7 @@
     @include link-colors(blue, red, green);
     @extend .App-logo;
 }
+
+.link-colors-2 {
+    font-weight: bold;
+}
