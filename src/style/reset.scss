@@ -117,18 +117,24 @@ table {
 
 .clearfix:after,
 .clearfix:before {
-    content: '';
-    display: table;
-}
-
-.clearfix:after {
+    content: "";
+    /*内容设置为空！！！*/
+    display: block;
+    /*显示为块级元素！！！*/
+    height: 0;
+    visibility: hidden;
     clear: both;
+    /*清除浮动！！！*/
+    // content: '';
+    // display: table;
 }
 
-.clearfix {
-    zoom: 1;
-}
-
+// .clearfix:after {
+//     clear: both;
+// }
+// .clearfix {
+//     zoom: 1;
+// }
 @media screen and (min-width: 768px) {}
 
 @media screen and (max-width: 768px) {}

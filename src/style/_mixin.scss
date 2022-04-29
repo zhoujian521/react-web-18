@@ -1,10 +1,3 @@
-// @include border-radius;
-@mixin border-radius {
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-}
-
 // @include link-colors(blue, red, green);
 @mixin link-colors($normal:$base-color, $hover:$base-color, $visited:$base-color) {
     color: $normal;
@@ -14,4 +7,48 @@
     &:visited {
         color: $visited;
     }
+}
+
+// @include border-radius;
+@mixin border-radius($radius:8px) {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+// 效果过度
+//   1.(transition过度）all:所有的全部 
+//        transition:all ； 给所有过度效果（单位s）                                                                                     
+//        transition：all ease；（默认效果慢快慢）
+//        transition：all linear;（匀速变换）                                                
+//        transition：all ease-in;（低速开始）                                                                              
+//        transition：all ease-out:（低速结束）  
+//        transition:background-color 1s ,width 5s,height 5s ; （同时背景宽高效果过度时间和格式）                                
+//        transition:过度属性 过度时间 时间曲线 延迟时间(鼠标点上去2s后开始变换）;（复合写法）             
+//   2.(transform)位移属性                                                 
+//        transform:translate( );平移(位移)	                                                           
+//        transform: translatey(位移y轴);                                                                      
+//        transform: trnslatex(位移x轴);
+//        可以放两个值：第一个值位移x轴 第二个位移y轴
+//        transform: translate(100px,100px);(两个值一起写往右下角移 写的时候用，隔开)
+//   3.scale(n)放大缩小  
+//         transform: scale(2); （(n=2)放大两倍）
+//        一个值:宽高同时放大缩小
+//        两个值:第一个值缩放宽度,第二个值缩放高度
+//        正整数(放大),负整数(翻转),小数(缩小)
+//   4.rotate( ndeg):旋转,单位deg；
+//        transform:rotate(45deg) ;((n=45deg)向顺时针旋转45度）
+//        正数:顺时针旋转;
+//        负数:逆时针旋转；
+//   5.skew:斜切(倾斜),单位是度数deg
+//        transform:skew(-72deg)((n=-72)向逆时针斜切72度)
+//   (他们都不会影响其他元素的位置,对行内标签没有效果)
+@mixin transition($property:'all', $duration:300ms) {
+    transition: $property $duration 'linear' 0ms;
+    /* Firefox 4 */
+    -moz-transition: $property $duration 'linear' 0ms;
+    /* Safari 和 Chrome */
+    -webkit-transition: $property $duration 'linear' 0ms;
+    /* Opera */
+    -o-transition: $property $duration 'linear' 0ms;
 }

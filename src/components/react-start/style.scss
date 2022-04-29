@@ -3,7 +3,7 @@
     text-align: center;
     .header {
         background-color: #282c34;
-        // min-height: 100vh;
+        min-height: 50vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -12,10 +12,18 @@
         color: white;
         .react-logo {
             height: 100px;
-            pointer-events: none;
+            // pointer-events: none;
+            @include transition(all, 300ms);
+        }
+        .react-logo:hover {
+            transform: scale(2);
         }
         .link {
             color: #61dafb;
+            @include transition(all, 300ms);
+        }
+        .link:hover {
+            transform: scale(2);
         }
     }
 }
